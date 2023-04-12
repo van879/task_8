@@ -6,12 +6,18 @@ namespace task_8
 	{
 		static void Main(string[] args)
 		{
-
 			int persons;
 			int timePerPerson = 10;
+			int hours;
+			int minutes;
+			int minutesInHour = 60;
+
 			Console.WriteLine("сколько человек в очереди?");
 			persons = Convert.ToInt32(Console.ReadLine());
-			Console.WriteLine($"Вы должны отстоять в очереди {persons * timePerPerson / 60} часа и {persons * timePerPerson % 60} минут.");
+			hours = persons * timePerPerson / minutesInHour;
+			minutes = persons * timePerPerson % minutesInHour;
+
+			Console.WriteLine($"Вы должны отстоять в очереди {hours} часа и {minutes} минут.");
 		}
 	}
 }
